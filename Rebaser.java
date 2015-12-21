@@ -194,7 +194,8 @@ public class Rebaser
             }
             else
             {
-                digit++;
+                if (digit ==  31) return "0";
+                else digit++;
             }
             if (digit > 31) break;
         }
@@ -229,9 +230,16 @@ public class Rebaser
     private void changeBase(int newBase)
     {
         int tempInt = 0;
-        for(int digit = 31; digit >= 0; digit--)
+        if (baseNumber == 10)
         {
-            tempInt += array[digit] * (int)Math.pow(baseNumber, 31 - digit);
+            tempInt = Integer.parseInt(number);
+        }
+        else
+        {
+            for(int digit = 31; digit >= 0; digit--)
+            {
+                tempInt += array[digit] * (int)Math.pow(baseNumber, 31 - digit);
+            }
         }
         Arrays.fill(array, (byte)0);
         for(int digit = 0; digit < 32; digit++)
