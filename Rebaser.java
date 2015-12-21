@@ -93,74 +93,87 @@ public class Rebaser
             
             if(digit == '0'){
                 array[arrayPosition] = 0;
-                highestChar = 0;
             }
             else if(digit == '1'){
                 array[arrayPosition] = 1;
-                highestChar = 1;
+                if(highestChar < 1)
+                    highestChar = 1;
             }
             else if(digit == '2'){
                 array[arrayPosition] = 2;
-                highestChar = 2;
+                if(highestChar < 2)
+                    highestChar = 2;
             }
             else if(digit == '3'){
                 array[arrayPosition] = 3;
-                highestChar = 3;
+                if(highestChar < 3)
+                    highestChar = 3;
             }
             else if(digit == '4'){
                 array[arrayPosition] = 4;
-                highestChar = 4;
+                if(highestChar < 4)
+                    highestChar = 4;
             }
             else if(digit == '5'){
                 array[arrayPosition] = 5;
-                highestChar = 5;
+                if(highestChar < 5)
+                    highestChar = 5;
             }
             else if(digit == '6'){
                 array[arrayPosition] = 6;
-                highestChar = 6;
+                if(highestChar < 6)
+                    highestChar = 6;
             }
             else if(digit == '7'){
                 array[arrayPosition] = 7;
-                highestChar = 7;
+                if(highestChar < 7)
+                    highestChar = 7;
             }
             else if(digit == '8'){
                 array[arrayPosition] = 8;
-                highestChar = 8;
+                if(highestChar < 8)
+                    highestChar = 8;
             }
             else if(digit == '9'){
                 array[arrayPosition] = 9;
-                highestChar = 9;
+                if(highestChar < 9)
+                    highestChar = 9;
             }
             else if(digit == 'A'){
                 array[arrayPosition] = 10;
-                highestChar = 10;
+                if(highestChar < 10)
+                    highestChar = 10;
             }
             else if(digit == 'B'){
                 array[arrayPosition] = 11;
-                highestChar = 11;
+                if(highestChar < 11)
+                    highestChar = 11;
             }
             else if(digit == 'C'){
                 array[arrayPosition] = 12;
-                highestChar = 12;
+                if(highestChar < 12)
+                    highestChar = 12;
             }
             else if(digit == 'D'){
                 array[arrayPosition] = 13;
-                highestChar = 13;
+                if(highestChar < 13)
+                    highestChar = 13;
             }
             else if(digit == 'E'){
                 array[arrayPosition] = 14;
-                highestChar = 14;
+                if(highestChar < 14)
+                    highestChar = 14;
             }
             else if(digit == 'F'){
                 array[arrayPosition] = 15;
-                highestChar = 15;
+                if(highestChar < 15)
+                    highestChar = 15;
             }
             else
             {
                 System.out.println("Error, invalid input");
                 break;
             }
-            
         }
     }
     
