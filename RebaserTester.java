@@ -4,10 +4,11 @@ public class RebaserTester {
         Rebaser test = new Rebaser();
         int input = 0;
         int max = Integer.MAX_VALUE;
+        boolean stop = false;
         
         for(int base = 2; base < 17; base++)
         {
-            for(input = 0; input <= max && input > -1; input += 100000)
+            for(input = 0; input <= max && input > -1 && !stop; input += 100000)
             {
                 String inputString = Integer.toString(input, base);
                 test.setValue(inputString);
@@ -20,16 +21,17 @@ public class RebaserTester {
                     System.out.println("on base " + base);
                     System.out.println("and input " + input);
                     System.out.println(compare + " " + inputString);
+                    stop = true;
                     break;
                 }
-                if (input % 1000000 == 0) System.out.println(input);
             }
-            for(input = 0; input <= max && input > -1; input += 100000)
+            for(input = 0; input <= max && input > -1 && !stop; input += 100000)
             {
                 String inputString = Integer.toString(input);
                 inputString = Integer.toString(input);
                 test.setValue(inputString);
                 inputString = Integer.toString(input, base);
+                inputString = inputString.toUpperCase();
                 String compare = test.convertToBaseN(base);
                 if (!(compare.equals(inputString)))
                 {
@@ -37,7 +39,8 @@ public class RebaserTester {
                     System.out.println("Error on base " + base);
                     System.out.println("and input " + input);
                     System.out.println("Comparison " + inputString + " " + compare);
-//                    break;
+                    stop = true;
+                    break;
                 }
             }
             

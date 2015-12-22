@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 /**
  * Rebaser class converts n from one base to another.
+ * 
+ * This program was a collaboration between Joshua and Benjamin. Benjamin wrote 
+ * the skeleton while Joshua wrote the javadoc, and the tester.
  */
 public class Rebaser
 {
@@ -32,7 +35,8 @@ public class Rebaser
     /**
      * Changes the input to n
      * @param value the integer that the value is being changed to
-     * @exception sets value equal to zero if input is not in hexadecimal
+     * @exception sets stored value equal to zero if input is not in
+     * hexadecimal
      */
     public void setValue(String value)
     {
@@ -60,10 +64,11 @@ public class Rebaser
     {
         return this.number;
     }
+    
     /**
      * Converts number to base n
      * @param n the base being converted into
-     * @return If stored value not in base 10, returns -1
+     * @return string of stored value converted to base n
      * @exception returns "-1" if the number contains characters that are above
      * base ten
      */
@@ -77,10 +82,11 @@ public class Rebaser
         }
         else return "-1";
     }
+    
     /**
      * Converts number to Base Ten
      * @param n Base that number is in
-     * @return -1 if stored value in not in base n
+     * @return string of stored value converted to base ten
      * @exception returns "-1" if the number contains characters that are above
      * the base being converted from
      */
@@ -95,6 +101,7 @@ public class Rebaser
         }
         else return "-1";
     }
+    
     /**
      * Makes an array from string input (number) and sets highestChar
      */
@@ -177,6 +184,7 @@ public class Rebaser
             }
         }
     }
+    
     /**
      * Makes string from array. Concatenates letters to digits.
      * @return String with letters for hexadecimal format.
@@ -223,9 +231,10 @@ public class Rebaser
         }
         return outputString;
     }
+    
     /**
      * Changes the base of the stored array and number 
-     * @param newBase base to convert the stored array and number to
+     * @param newBase base to which to convert the stored array and number
      */
     private void changeBase(int newBase)
     {
